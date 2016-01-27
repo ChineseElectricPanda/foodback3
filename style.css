@@ -1,8 +1,33 @@
-.carousel-inner > .item > img, 
-.carousel-inner > .item > a > img {
-    width: 100%;
-    margin: auto;
-    
+.carousel { z-index: -99; } /* keeps this behind all content */
+.carousel .item {
+    position: fixed; 
+    width: 100%; height: 100%;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+
+}
+.carousel .one {
+    background: url(mainMenuPicture.jpg);
+    background-size: 100%;
+    -moz-background-size: cover;
+}
+.carousel .two {
+    background: url(mainMenuPicture2.jpg);
+    background-size: cover;
+    -moz-background-size: cover;
+}
+.carousel .three {
+    background: url(mainMenuPicture3.jpg);
+    background-size: cover;
+    -moz-background-size: cover;
+}
+.carousel .active.left {
+    left:0;
+    opacity:0;
+    z-index:2;
 }
 
 html, body{
